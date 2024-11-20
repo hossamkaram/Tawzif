@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recruitment Firm - Job Seekers & Employers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #007bff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .flex .box {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+        .box h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .box p {
+            margin-bottom: 20px;
+        }
+        .box a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .box a:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea, form select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+        form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .flex .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to [Your Recruitment Firm Name]</h1>
+        <p>Your Gateway to Talent and Opportunity</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#jobseekers">Job Seekers</a>
+        <a href="#employers">Employers</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="container" id="home">
+        <div class="flex">
+            <!-- Job Seekers Section -->
+            <div class="box" id="jobseekers">
+                <h2>For Job Seekers</h2>
+                <p>Apply to top companies through us. Submit your resume, cover letter, and other documents to start your job search journey.</p>
+                <a href="#apply">Apply Now</a>
+            </div>
+
+            <!-- Employers Section -->
+            <div class="box" id="employers">
+                <h2>For Employers</h2>
+                <p>Partner with us to find the best talent for your company. Post a job vacancy or request a consultation with our recruitment experts.</p>
+                <a href="#post-job">Post a Job</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Job Seekers - Application Form -->
+    <div class="container" id="apply">
+        <h2>Job Seekers - Apply Now</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <textarea name="cover_letter" rows="5" placeholder="Cover Letter"></textarea>
+            <label>Upload Resume:</label>
+            <input type="file" name="resume" required>
+            <label>Upload Certificates (Optional):</label>
+            <input type="file" name="certificates">
+            <input type="submit" value="Submit Application">
+        </form>
+    </div>
+
+    <!-- Employers - Post a Job Form -->
+    <div class="container" id="post-job">
+        <h2>Employers - Post a Job</h2>
+        <form action="#" method="post">
+            <input type="text" name="company_name" placeholder="Company Name" required>
+            <input type="text" name="job_title" placeholder="Job Title" required>
+            <textarea name="job_description" rows="5" placeholder="Job Description" required></textarea>
+            <label>Employment Type:</label>
+            <select name="employment_type" required>
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+                <option value="contract">Contract</option>
+            </select>
+            <input type="text" name="salary_range" placeholder="Salary Range" required>
+            <input type="submit" value="Post Job">
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Contact us: [Your Contact Email] | [Your Phone Number]</p>
+    </footer>
+
+</body>
+</html>
